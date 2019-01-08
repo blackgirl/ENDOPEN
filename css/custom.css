@@ -163,6 +163,14 @@ h3, h4 {
 .bs-component .modal-dialog {
     width: 90%;
 }
+.modal-header {
+    padding: 15px;
+    border-bottom: none;
+    min-height: 50px;
+}
+.patent1-modal img, .patent2-modal img {
+    width: 100%;
+}
 .bs-component .popover {
     position: relative;
     display: inline-block;
