@@ -64,7 +64,7 @@ body>.navbar {
     letter-spacing: .6px;
 }
 #lifehucks .row:last-child {
-    margin-bottom: 40px;
+    /*margin-bottom: 40px;*/
 }
 .fa-num {
     color: #fff;
@@ -73,27 +73,6 @@ body>.navbar {
 }
 
 /* BANNER TEXT */
-/*.salat-header {
-    background-color: #a2c02e;
-}   
-.violet-header {
-    background-color: #6042a3;
-}
-.blue-header {
-    background-color: deepskyblue;
-}
-.salat-header,.violet-header,.blue-header {
-    min-height: 250px;
-}
-#particles-js {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    float: left;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}*/
 #banner h1 {
     color: #000;
     letter-spacing: 7px;
@@ -305,12 +284,6 @@ nav.fixed-theme .navbar-brand img {
 /*  .page--home .section--home-test-A .bgCircle--home-a {
     background: linear-gradient(-225deg, #a177ff 0%, #FF6D92 100%);
   }
-  .page--home .section--home-test-A .bgCircle--home-b {
-    background: linear-gradient(155deg, #02CEFF 0%, #3bf7d1 60%, #3bf7d1 100%);
-  }
-  .page--home .section--home-test-A .bgCircle--home-c {
-    background: linear-gradient(-45deg, #FC636B 0%, #FF6D92 60%, #ffb900 100%);
-  }*/
 /* PAGE SCIENSE */
 .contact {
     text-align: center;
@@ -424,15 +397,18 @@ iframe {
 }
 .carousel-control {
     width: auto;
+    font-size: 24px;
+    opacity: 0.8;
     color: #000;
     padding: 5% 15px;
+    text-shadow: none;
     background-image: none !important;
 }
 .carousel-control:hover, .carousel-control:focus {
     outline: 0;
     color: #000;
     text-decoration: none;
-    opacity: 0.9;
+    opacity: 1;
 }
 .carousel-indicators {
     left: 0;
@@ -565,13 +541,6 @@ footer p {
         padding-top: 15px;
         padding-bottom: 0;
     }
-    /*.header-partials h2 {
-        font-size: 18px;
-        padding-top: 20px;
-    }
-    .header-partials {
-        font-size: 14px;
-    }*/
     .bs-docs-section h1 {
         margin-top: 40px;
     }
@@ -590,7 +559,7 @@ footer p {
         padding: 0 15px;
     }
     .carousel-control {
-        padding: 25% 15px;
+        padding: 25% 0;
     }
     ul.social-network li {
       margin: 5px;
