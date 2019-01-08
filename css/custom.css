@@ -457,7 +457,7 @@ iframe {
     width: 100%;
     font-size: 0;
     height: 20px;
-    bottom: -15px;
+    bottom: -40px;
     padding: 0 5px;
     cursor: e-resize;
     overflow-x: auto;
@@ -465,6 +465,9 @@ iframe {
     position: absolute;
     text-align: center;
     white-space: nowrap;
+}
+#reviews-slide .carousel-indicators {
+    bottom: 0px;
 }
 .carousel-indicators li {
     padding: 0;
@@ -497,6 +500,7 @@ iframe {
 .btn-black {
     border: 3px solid #000;
     color: #000;
+    background: #fff;
 }
 .btn-black:hover {
     background: #000;
