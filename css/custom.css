@@ -561,8 +561,9 @@ footer p {
     .carousel-inner {
         padding: 0 15px;
     }
+    #reviews-slide .carousel-control,
     .carousel-control {
-        padding: 25% 0;
+        padding: 15% 0;
     }
     ul.social-network li {
       margin: 5px;
