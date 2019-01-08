@@ -397,7 +397,7 @@ iframe {
 }
 .carousel-control {
     width: auto;
-    font-size: 24px;
+    font-size: 64px;
     opacity: 0.5;
     color: #000;
     padding: 5% 15px;
