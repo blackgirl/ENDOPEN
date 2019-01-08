@@ -45,7 +45,7 @@ body>.navbar {
 
 /* LIFEHUCKS BLOCK */
 #lifehucks .page-content .row div {
-    font-weight: 200;
+    font-weight: 300;
     margin-bottom: 40px;
 }
 #lifehucks h1 {
@@ -123,7 +123,7 @@ h3, h4 {
 }
 .page-header p {
     padding: 15px;
-    font-weight: 200;
+    font-weight: 300;
     margin: 0 15%;
 }
 /*.header-partials {
@@ -301,7 +301,7 @@ nav.fixed-theme .navbar-brand img {
 }
 .navbar-brand.fixed-theme,  .navbar.fixed-theme li a  {
     font-size: 16px;
-    font-weight: 200;
+    font-weight: 300;
 }
 .navbar .navbar-right.language li {
     float: left;
@@ -348,7 +348,7 @@ nav.fixed-theme .navbar-brand img {
 /* PAGE SCIENSE */
 .contact {
     text-align: center;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 18px;
     line-height: 1.5;
 }
