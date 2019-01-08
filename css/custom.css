@@ -452,7 +452,7 @@ iframe {
 .carousel-control {
     width: auto;
     color: #000;
-    padding: 25% 15px;
+    padding: 5% 15px;
     background-image: none !important;
 }
 .carousel-control:hover, .carousel-control:focus {
@@ -615,6 +615,9 @@ footer p {
     }
     .carousel-inner {
         padding: 0 15px;
+    }
+    .carousel-control {
+        padding: 25% 15px;
     }
     ul.social-network li {
       margin: 5px;
