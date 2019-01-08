@@ -607,7 +607,8 @@ footer p {
         text-align: center;
         min-height: 350px;
         padding-bottom: 0;
-        background-size: contain;
+        /*background-size: contain;*/
+        background-position-y: 40px;
     }
     #banner img {
         width: 100%;
