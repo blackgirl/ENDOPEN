@@ -426,7 +426,7 @@ iframe {
     white-space: nowrap;
 }
 #reviews-slide .carousel-indicators {
-    bottom: 0px;
+    bottom: -15px;
 }
 .carousel-indicators li {
     padding: 0;
