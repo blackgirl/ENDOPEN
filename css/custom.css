@@ -396,12 +396,6 @@ iframe {
     color: lightskyblue;
     text-shadow: none;
 }
-.badge-notify {
-    background: #c71585;
-    position: relative;
-    top: -20px;
-    right: 10px;
-}
 .my-cart-icon {
     cursor: pointer;
     position: fixed;
@@ -415,6 +409,19 @@ iframe {
 .my-cart-icon-affix {
     position: fixed;
     z-index: 999;
+}
+.fa-basket {
+    background: url(https://img.icons8.com/wired/1600/shopping-bag-full.png);
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    margin-right: 15px;
+}
+.badge-notify {
+    background: #c71585;
+    position: relative;
+    bottom: -10px;
+    right: 15px;
 }
 #my-cart-modal .modal-dialog {
     background: #fff;
