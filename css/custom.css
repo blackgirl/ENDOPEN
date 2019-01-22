@@ -8,6 +8,29 @@ body>.navbar {
     -webkit-transition: background-color 300ms ease-in;
     transition: background-color 300ms ease-in;
 }
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+}
+ul.dashed > li {
+  text-indent: -5px;
+}
+ul.dashed > li:before {
+  content: "—";
+  text-indent: -5px;
+}
+
+blockquote {
+    padding: 10px;
+    margin: 0 0 20px;
+    font-size: 16px;
+    border: 3px solid #222;
+    /* font-style: italic; */
+    text-align: center;
+}
+
 /* HOME PAGE */
 #home {
     padding-top: 0;
@@ -75,17 +98,32 @@ body>.navbar {
 /* BANNER TEXT */
 #banner h1 {
     color: #000;
-    letter-spacing: 7px;
     font-family: Lato,Roboto,'Open Sans',Helvetica,Arial,sans-serif;
+    /*letter-spacing: 7px;
     font-variant: small-caps;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
+    text-transform: none;
+    font-variant: normal;
+    font-size: 1.5em;
+}
+#banner h1 p,
+#banner h1 ul {
+    font-size: initial;
+    text-align: left;
+    margin: 0 25%;
 }
 #banner h1 abbr {
     font-size: .4em;
     font-weight: 100
 }
+form label,
 h3 {
     font-size: 1em;
+    font-family: Lato,Roboto,'Open Sans',Helvetica,Arial,sans-serif;
+    letter-spacing: 2px;
+    font-variant: small-caps;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 h3, h4 {
     color: #000;
