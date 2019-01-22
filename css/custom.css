@@ -71,17 +71,22 @@ blockquote {
     font-weight: 300;
     margin-bottom: 40px;
 }
-#lifehucks h1 {
+#lifehucks h2 {
     font-weight: 500;
     margin: 50px 0;
     /*font-family: 'Proxima Nova';*/
 }
 #lifehucks .fa {
     margin-right: 15px;
-    font-size: 24px;
+     font-weight: normal; 
 }
 #lifehucks h4 {
     font-size: 24px;
+    font-variant: all-petite-caps;
+    letter-spacing: 0.0em;
+    font-family: Lato,Roboto,'Open Sans',Helvetica,Arial,sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
 }
 #lifehucks p {
     letter-spacing: .6px;
@@ -116,14 +121,17 @@ blockquote {
     font-size: .4em;
     font-weight: 100
 }
+.fa.fa-num,
+.btn,
 form label,
 h3 {
-    font-size: 1em;
+    font-size: 0.8em;
     font-family: Lato,Roboto,'Open Sans',Helvetica,Arial,sans-serif;
     letter-spacing: 2px;
     font-variant: small-caps;
     text-transform: uppercase;
     font-weight: bold;
+    font-style: normal;
 }
 h3, h4 {
     color: #000;
@@ -131,19 +139,22 @@ h3, h4 {
 #banner .row {
     margin: 40px 0 0 0;
 }
-.page-header h1 {
+.page-header h2 {
     font-size: 2em;
     color: #000;
+    font-family: Lato,Roboto,'Open Sans',Helvetica,Arial,sans-serif;
     text-transform: uppercase;
-    font-variant: all-petite-caps;
-    letter-spacing: 0.0em;
+    /*font-variant: all-petite-caps;*/
+    /*letter-spacing: 0.0em;*/
+    font-variant: small-caps;
+    letter-spacing: 2px;
 }
 .page-header p {
     padding: 15px;
     font-weight: 300;
     margin: 0 15%;
 }
-.bs-docs-section h1 {
+.bs-docs-section h2 {
     padding-top: 50px;
 }
 .bs-component {
@@ -582,7 +593,7 @@ footer p {
         padding-top: 15px;
         padding-bottom: 0;
     }
-    .bs-docs-section h1 {
+    .bs-docs-section h2 {
         margin-top: 40px;
     }
     #banner {
@@ -619,13 +630,13 @@ footer p {
     }
 }
 @media (max-width: 967px) {
-    .page-header h1 {
+    .page-header h2 {
         font-size: 3em;
         padding-top: 20px;
     }
 }
 @media (max-width: 680px) {
-    .page-header h1 {
+    .page-header h2 {
         font-size: 2em;
     }
 }
