@@ -23,11 +23,12 @@ ul.dashed > li:before {
 }
 
 blockquote {
-    padding: 10px;
+    padding: 10px 10%;
     margin: 0 0 20px;
     font-size: 16px;
     border: 3px solid #222;
     /* font-style: italic; */
+    /*font-weight: 400; */
     text-align: center;
 }
 
@@ -71,6 +72,8 @@ blockquote {
     font-weight: 300;
     margin-bottom: 40px;
 }
+#reviews h2,
+#partners h2,
 #lifehucks h2 {
     font-weight: 500;
     margin: 50px 0;
@@ -101,6 +104,9 @@ blockquote {
 }
 
 /* BANNER TEXT */
+#banner .row {
+    margin: 60px 0 0 0;
+}
 #banner h1 {
     color: #000;
     font-family: Lato,Roboto,'Open Sans',Helvetica,Arial,sans-serif;
@@ -111,11 +117,12 @@ blockquote {
     font-variant: normal;
     font-size: 1.5em;
 }
-#banner h1 p,
-#banner h1 ul {
+#banner p,
+#banner ul {
     font-size: initial;
-    text-align: left;
-    margin: 0 25%;
+    /*text-align: left;*/
+    font-weight: 400;
+    margin: 50px 15%;
 }
 #banner h1 abbr {
     font-size: .4em;
@@ -136,9 +143,6 @@ h3 {
 h3, h4 {
     color: #000;
 }
-#banner .row {
-    margin: 40px 0 0 0;
-}
 .page-header h2 {
     font-size: 2em;
     color: #000;
@@ -149,11 +153,11 @@ h3, h4 {
     font-variant: small-caps;
     letter-spacing: 2px;
 }
-.page-header p {
+/*.page-header p {
     padding: 15px;
     font-weight: 300;
     margin: 0 15%;
-}
+}*/
 .bs-docs-section h2 {
     padding-top: 50px;
 }
@@ -380,6 +384,9 @@ iframe {
     font-weight: 600;
     letter-spacing: 1px;
 }
+.product-thumb h3 {
+    min-height: 42px;
+}
 /* SHOPPING CART */
 #my-cart-modal {
     z-index: 9999;
@@ -438,18 +445,18 @@ iframe {
     background: #fff;
 }
 #reviews-slide .slide img {
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  margin: auto;
-  display: block;
-  color: #f2f2f2;
-  font-size: 18px;
-  line-height: 46px;
-  text-align: center;
-  position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 15px;
+    display: block;
+    color: #f2f2f2;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+    position: relative;
 }
 .carousel-control {
     width: auto;
@@ -511,6 +518,10 @@ iframe {
     border-radius: 1px;
 }
 
+/* FORM */
+#form {
+    margin-top: 30px;
+}
 /* BUTTONS */
 .btn {
     border-radius: 0;
