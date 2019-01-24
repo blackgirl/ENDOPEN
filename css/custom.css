@@ -21,6 +21,10 @@ ul.dashed > li:before {
   content: "—";
   text-indent: -5px;
 }
+a, a:hover, a:focus, a:active {
+    color: #000;
+    font-weight: 400;
+}
 
 blockquote {
     padding: 10px 10%;
@@ -83,6 +87,7 @@ blockquote {
     margin-right: 15px;
      font-weight: normal; 
 }
+.slide-header,
 #lifehucks h4 {
     font-size: 24px;
     font-variant: all-petite-caps;
@@ -549,21 +554,28 @@ ul.social-network li {
   display: inline-block;
   margin: 0 5px;
 }
-.social-network a.icoFacebook {
-  background-color:#3B5998;
-    color:#fff;
+.social-network a {
+    border: 3px solid #000;
+    color: #000;
+}
+/*.social-network a.icoFacebook {
+    background-color: #3B5998;
+}
+.social-network a.icoInstagram {
+    background-color: #fccc63;
 }
 .social-network a.icoTwitter{
-  background-color:#33ccff; color:#fff;
+  background-color: #33ccff;
 }
 .social-network a.icoTumblr {
-  background-color:#007bb7; color:#fff;
+  background-color: #007bb7;
 }
 .social-network a.icoLinkedin {
-  background-color:#3B5998; color:#fff;
-}
-a.socialIcon:hover, .socialHoverClass {
-  color:#44BCDD;
+  background-color: #3B5998;
+}*/
+.social-network a:hover{
+  background-color: #000;
+  color: #fff;
 }
 .social-square li a {
   display:inline-block;
@@ -579,7 +591,7 @@ a.socialIcon:hover, .socialHoverClass {
 }
 .social-square li i {
   margin: 0;
-  line-height: 40px;
+  line-height: 37px;
   text-align: center;
 }
 /* FOOTER */
