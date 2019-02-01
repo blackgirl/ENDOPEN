@@ -291,7 +291,7 @@ nav.fixed-theme {
     padding: 0;
 }
 nav.fixed-theme .navbar-brand {
-    padding: 5px 15px;
+    padding: 5px 0px;
 }
 nav.fixed-theme .navbar-brand img {
     max-height: 40px;
@@ -639,6 +639,10 @@ footer p {
     }
     .navbar-fixed-top.fixed-theme + .my-cart .my-cart-icon {
         top: 5px;
+    }
+    nav.fixed-theme .navbar-brand img {
+        /*padding: 10px 15px;*/
+        padding-right: 0;
     }
     .bs-docs-section h2 {
         margin-top: 40px;
