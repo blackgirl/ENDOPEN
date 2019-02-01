@@ -225,8 +225,8 @@
         '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
         '<div class="modal-footer">' +
-        '<button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>' +
-        '<button type="button" class="btn btn-primary disabled ' + classCheckoutCart + '">Оформить</button>' +
+        '<button type="button" class="btn btn-grey" data-dismiss="modal">Закрыть</button>' +
+        '<button type="button" class="btn btn-black disabled ' + classCheckoutCart + '">Оформить</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -262,7 +262,7 @@
         '<td class="text-right"><strong id="' + idGrandTotal + '"></strong></td>' +
         '<td></td>' +
         '</tr>' :
-        '<div class="alert alert-danger" role="alert" id="' + idEmptyCartMessage + '">Здесь ещё пусто</div>'
+        '<div class="alert alert-black" role="alert" id="' + idEmptyCartMessage + '">Здесь ещё пусто</div>'
       );
       if(products.length) {
         $(".my-cart-checkout").removeClass("disabled");
