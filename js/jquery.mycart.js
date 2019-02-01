@@ -222,7 +222,7 @@
         '<h4 class="modal-title" id="myModalLabel"><span class="fa fa-shopping-cart"></span>&nbsp;&nbsp;Корзина</h4>' +
         '</div>' +
         '<div class="modal-body">' +
-        '<table class="table table-hover table-responsive" id="' + idCartTable + '"></table>' +
+        '<table class="table table-responsive" id="' + idCartTable + '"></table>' +
         '</div>' +
         '<div class="modal-footer">' +
         '<button type="button" class="btn btn-grey" data-dismiss="modal">Закрыть</button>' +
@@ -248,7 +248,7 @@
           '<td title="Unit Price" class="text-right">' + MathHelper.getRoundedNumber(this.price) + options.currencySymbol + '</td>' +
           '<td title="Quantity"><input type="number" min="1" style="width: 40px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
           '<td title="Total" class="text-right ' + classProductTotal + '">' + MathHelper.getRoundedNumber(total) + options.currencySymbol + '</td>' +
-          '<td title="Remove from Cart" class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">X</a></td>' +
+          '<td title="Remove from Cart" class="text-center" style="width: 30px;padding: 5px 0;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">×</a></td>' +
           '</tr>'
         );
       });
@@ -271,18 +271,18 @@
       }
 
       var discountPrice = options.getDiscountPrice(products, ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
-      if (products.length && discountPrice !== null) {
-        $cartTable.append(
-          '<tr style="color: red">' +
-          '<td></td>' +
-          '<td><strong>ИТОГО (с учётом доставки)</strong></td>' +
-          '<td></td>' +
-          '<td></td>' +
-          '<td class="text-right"><strong id="' + idDiscountPrice + '"></strong></td>' +
-          '<td></td>' +
-          '</tr>'
-        );
-      }
+      // if (products.length && discountPrice !== null) {
+      //   $cartTable.append(
+      //     '<tr style="color: red">' +
+      //     '<td></td>' +
+      //     '<td><strong>ИТОГО (с учётом доставки)</strong></td>' +
+      //     '<td></td>' +
+      //     '<td></td>' +
+      //     '<td class="text-right"><strong id="' + idDiscountPrice + '"></strong></td>' +
+      //     '<td></td>' +
+      //     '</tr>'
+      //   );
+      // }
 
       showGrandTotal();
       showDiscountPrice();

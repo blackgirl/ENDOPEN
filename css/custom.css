@@ -546,6 +546,9 @@ iframe {
 .table-responsive {
     border: none;
 }
+td, th {
+    font-weight: 300;
+}
 .alert {
     border-radius: 0px;
 }
@@ -578,6 +581,17 @@ iframe {
 .my-product-remove {
     border: none;
     border-radius: 0;
+    background-image: none;
+    background: none;
+    color: #c71c22;
+    font-size: 1.5em;
+    line-height: 1;
+}
+.btn-danger:hover {
+    color: #9a161a;
+    background: none;
+    border-color: #9a161a;
+    font-weight: bold;
 }
 ul.social-network {
   list-style: none;
