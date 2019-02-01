@@ -641,8 +641,7 @@ footer p {
         top: 5px;
     }
     nav.fixed-theme .navbar-brand img {
-        /*padding: 10px 15px;*/
-        padding-right: 0;
+        padding: 10px 0px;
     }
     .bs-docs-section h2 {
         margin-top: 40px;
