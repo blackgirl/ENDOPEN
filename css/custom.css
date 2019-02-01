@@ -739,7 +739,11 @@ footer p {
     .modal-body {
         padding: 0px;
     }
-    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th,
+    .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+        padding: 8px;
+    }
+    .table > thead > tr > td.quantity, .table > tbody > tr > td.quantity, .table > tfoot > tr > td.quantity {
         padding: 5px;
     }
     .product-thumb h3 {

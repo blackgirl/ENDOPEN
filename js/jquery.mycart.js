@@ -265,7 +265,7 @@
           '<td class="text-center hidden-xs" style="width: 30px;"><img width="30px" height="30px" src="' + this.image + '"/></td>' +
           '<td>' + this.name + '</td>' +
           '<td title="Unit Price" class="text-right">' + MathHelper.getRoundedNumber(this.price) + '</td>' +
-          '<td title="Quantity"><input type="number" min="1" style="width: 30px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
+          '<td class="quantity" title="Quantity"><input type="number" min="1" style="width: 30px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
           '<td title="Total" class="text-right ' + classProductTotal + ' style="">' + MathHelper.getRoundedNumber(total) + '</td>' +
           '<td title="Remove from Cart" class="text-center" style="width: 30px;padding: 3px 0;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">×</a></td>' +
           '</tr>'
