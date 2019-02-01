@@ -66,7 +66,7 @@ blockquote {
     box-shadow: none;
     color: #000;
     padding: 98px 0 98px 0;
-    background-image: url(../img/dentist-tool-icon-vectors.jpeg);
+    /*background-image: url(../img/dentist-tool-icon-vectors.jpeg);*/
     background-size: cover;
     background-position: bottom center;
 }
@@ -110,7 +110,8 @@ blockquote {
 
 /* BANNER TEXT */
 #banner .row {
-    margin: 60px 0 0 0;
+    /*margin: 60px 0 0 0;*/
+    margin: 0px;
 }
 #banner h1 {
     color: #000;
@@ -248,6 +249,9 @@ h3, h4 {
     font-weight: 600;
     text-decoration: none;
 }
+.navbar-default .navbar-nav > li > a.active {
+    font-weight: 600;
+}
 .navbar-default .navbar-brand {
     font-weight: 300;
     letter-spacing: 5px;
@@ -338,6 +342,9 @@ nav.fixed-theme .navbar-brand img {
     transition: 0.8s;
     -webkit-transition:  0.8s;
 }
+.navbar-toggle {
+    float: left;
+}
 /* Color Circles Background */
 /*  .page--home .section--home-test-A .bgCircle--home-a {
     background: linear-gradient(-225deg, #a177ff 0%, #FF6D92 100%);
@@ -420,7 +427,7 @@ iframe {
 }
 .my-cart-icon-affix {
     position: fixed;
-    z-index: 999;
+    z-index: 1032;
 }
 .fa-basket {
     background: url(https://img.icons8.com/wired/1600/shopping-bag-full.png);
@@ -468,12 +475,16 @@ iframe {
     font-size: 64px;
     opacity: 0.5;
     color: #000;
-    padding: 25% 15px;
+    padding: 0 15px;
+    top: 25%;
     text-shadow: none;
     background-image: none !important;
 }
 #reviews-slide .carousel-control {
     padding: 5% 15px;
+}
+#pattents-slide .carousel-control {
+    padding: 8% 15px;
 }
 .carousel-control:hover, .carousel-control:focus {
     outline: 0;
@@ -623,26 +634,37 @@ footer p {
         padding-top: 15px;
         padding-bottom: 0;
     }
+    .my-cart-icon {
+        top: 15px;
+    }
+    .navbar-fixed-top.fixed-theme + .my-cart .my-cart-icon {
+        top: 5px;
+    }
     .bs-docs-section h2 {
         margin-top: 40px;
     }
     #banner {
         margin-bottom: 0;
         text-align: center;
-        min-height: 350px;
+        min-height: 400px;
         padding-bottom: 0;
         /*background-size: contain;*/
         background-position-y: 40px;
+        padding-top: 75px;
     }
     #banner img {
         width: 100%;
+    }
+    #banner p,
+    #banner ul {
+        margin: 20px 0;
     }
     .carousel-inner {
         padding: 0 15px;
     }
     #reviews-slide .carousel-control,
     .carousel-control {
-        padding: 15% 0;
+        padding: 0;
     }
     ul.social-network li {
       margin: 5px;

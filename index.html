@@ -22,15 +22,15 @@
 <nav class="navbar navbar-default navbar-fixed-top" id="header">
   <div class="container-fluid col-xs-12" id="header-container">
     <div class="navbar-header">
-      <a href="#" class="navbar-brand" id="brand">
-      	<img src="img/endopen_logo.jpg" alt="">
-      	<!-- <span>Endo<strong>pen</strong></span> -->
-      </a>
       <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <a href="#" class="navbar-brand" id="brand">
+      	<img src="img/endopen_logo.jpg" alt="">
+      	<!-- <span>Endo<strong>pen</strong></span> -->
+      </a>
     </div>
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
@@ -44,7 +44,7 @@
           <a href="#instruction" class="page-scroll">Инструкции</a>
         </li>
         <li class="FAQ">
-          <a href="#lifehucks" class="page-scroll">Лайфхаки</a>
+          <a href="lifehucks.html" class="page-scroll">Лайфхаки</a>
         </li>
          <li class="FAQ">
           <a href="#reviews" class="page-scroll">Отзывы</a>
@@ -60,7 +60,7 @@
   </div>
 </nav>
 
-<div style="float: right; cursor: pointer;">
+<div class="my-cart" style="float: right; cursor: pointer;">
 	<span class="fa fa-basket my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
 </div>
 
@@ -69,9 +69,9 @@
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-xs-12">
 	            <!-- <h1><abbr>Уникальный стоматологический инструмент</abbr> <br>Endopen</h1> -->
-	            <img src="img/endopen_logo.jpg" alt="">
-	            <p class="text-center">Мы занимается производством уникального инструмента Endopen и комплектующих к нему.</br>
-				Этот инструмент был создан исходя из опыта работы соединив в себе удобство в работе, качество и долговечность.</p>
+	            <!-- <img src="img/endopen_logo.jpg" alt=""> -->
+	            <img src="img/cut-bg-logo.png" alt="">
+	            <p class="text-center">Мы занимается производством уникального инструмента Endopen и комплектующих к нему.</p>
             </div>
 		</div>
 	</div>
@@ -240,7 +240,7 @@
     <br><br>
 </div>
 <!-- Lifehucks Section -->
-<div class="col-md-12 col-xs-12 container-fluid" id="lifehucks">
+<div class="col-md-12 col-xs-12 container-fluid hidden" id="lifehucks">
   	<div class="row" data-sr>
       <div class="col-md-10 col-md-offset-1">
         <div class="page-header"><h2 id="">Преимущества</h2></div>
@@ -394,12 +394,35 @@
           </div>
         </div>
         <div class="row" data-sr>
-          <div class="col-lg-10 col-lg-offset-2 col-xs-12">
-          	<a role="button" class="" data-toggle="modal" data-target=".patent1-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
-			<a role="button" class="" data-toggle="modal" data-target=".patent2-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
-		  </div>
-	    </div>
-	    <br><br>
+        	<div id="pattents-slide" class="carousel slide pattents-slide_indicators pattents-slide_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+				<ol class="carousel-indicators">
+					<li data-target="#pattents-slide" data-slide-to="0" class="active"></li>
+					<li data-target="#pattents-slide" data-slide-to="1"></li>
+					<li data-target="#pattents-slide" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner" role="listbox">
+					<div class="item text-center active">
+						<div class="slide col-lg-10 col-lg-offset-1 col-xs-12">
+				          	<a role="button" class="" data-toggle="modal" data-target=".patent1-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+							<a role="button" class="" data-toggle="modal" data-target=".patent2-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+							<a role="button" class="" data-toggle="modal" data-target=".patent1-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+							<a role="button" class="" data-toggle="modal" data-target=".patent2-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+					    </div>
+					</div>
+					<div class="item text-center">
+						<div class="slide col-lg-10 col-lg-offset-1 col-xs-12">
+				          	<a role="button" class="" data-toggle="modal" data-target=".patent1-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+							<a role="button" class="" data-toggle="modal" data-target=".patent2-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+							<a role="button" class="" data-toggle="modal" data-target=".patent1-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+							<a role="button" class="" data-toggle="modal" data-target=".patent2-modal"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIT694QpcScUYLx23CAUzmPGLWZDGthbxsPPp7OxY8nCv6WM4d" alt="Kosher Certificate 2015" class="col-md-3 col-xs-6"></a>
+					    </div>
+					</div>
+					<a class="left carousel-control" href="#pattents-slide" role="button" data-slide="prev"><span class="">&lang;</span></a>
+					<a class="right carousel-control" href="#pattents-slide" role="button" data-slide="next"><span class="">&rang;</span></a>
+				</div>
+		    </div>
+		    <br><br>
+		</div>
 	</div>
 </div>
 
@@ -431,7 +454,7 @@
     <div class="row">
       <div class="col-lg-12">
         <ul class="list-unstyled" data-sr>
-			<li class="pull-left"><p style="visibility: visible; ">2019 © <a href="http://endopen.com.ua" rel="nofollow">endopen.com.ua</a>. Все права защищены</p></li>
+			<li class="pull-left"><p style="visibility: visible; ">2019 © <a href="http://endopen.com.ua" rel="nofollow">endopen.com.ua</a>.</p></li>
 			<li class="pull-right"><a href="#top" class="page-scroll">Наверх&nbsp;<span class="arrow-up">&uarr;<span></a></li>
 			<!-- <li class="footer-link"><a href="#character" class="page-scroll" id="themes">Характеристики</a></li>
             <li class="footer-link"><a href="#shop" class="page-scroll">Магазин</a></li>
