@@ -602,7 +602,7 @@ td, th {
     color: #c71c22;
     font-size: 1.5em;
     line-height: 1;
-    padding: 0;
+    padding: 3px;
 }
 .btn-danger:hover {
     color: #9a161a;
