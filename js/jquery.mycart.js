@@ -13,7 +13,7 @@
 
     var _options = null;
     var DEFAULT_OPTIONS = {
-      currencySymbol: 'UAH',
+      currencySymbol: '₴',
       classCartIcon: 'my-cart-icon',
       classCartBadge: 'my-cart-badge',
       classProductQuantity: 'my-product-quantity',
@@ -21,7 +21,7 @@
       classCheckoutCart: 'my-cart-checkout',
       affixCartIcon: true,
       showCheckoutModal: true,
-      numberOfDecimals: 2,
+      numberOfDecimals: 0,
       cartItems: null,
       clickOnAddToCart: function ($addTocart) {},
       afterAddOnCart: function (products, totalPrice, totalQuantity) {},
@@ -223,10 +223,29 @@
         '</div>' +
         '<div class="modal-body">' +
         '<table class="table table-responsive" id="' + idCartTable + '"></table>' +
+        
+        '<div class="col-md-10 col-xs-12">' +
+        '<form method="post" action="" id="ajaxform1" class="checkout-form">' +
+          '<div class="form-group">' +
+            '<label for="name" class="control-label">Имя:</label>' +
+            '<input type="text" class="form-control" size="32" maxlength="36" id="name" name="name" placeholder="Ваше имя" val="">' +
+          '</div>' +
+          '<div class="form-group">' +
+            '<label for="email" class="control-label">Эл.адрес:</label>' +
+            '<input type="text" class="form-control" size="32" maxlength="36" id="email" name="email" placeholder="Ваш email" val="">' +
+          '</div>' +
+          '<div class="form-group">' +
+            '<label for="phone" class="control-label">Телефон:</label>' +
+            '<input type="text"  class="form-control" size="32" maxlength="36" id="phone" name="phone" class="form-control bfh-phone" placeholder="Номер телефона" val="">' +
+          '</div>' +
+        '</div>' +
+        '</form>' +
+        '</div>' +
+
         '</div>' +
         '<div class="modal-footer">' +
         '<button type="button" class="btn btn-grey" data-dismiss="modal">Закрыть</button>' +
-        '<button type="button" class="btn btn-black disabled ' + classCheckoutCart + '">Оформить</button>' +
+        '<button type="submit" class="btn btn-black disabled ' + classCheckoutCart + '">Оформить</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -245,10 +264,10 @@
           '<tr title="' + this.summary + '" data-id="' + this.id + '" data-price="' + this.price + '">' +
           '<td class="text-center" style="width: 30px;"><img width="30px" height="30px" src="' + this.image + '"/></td>' +
           '<td>' + this.name + '</td>' +
-          '<td title="Unit Price" class="text-right">' + MathHelper.getRoundedNumber(this.price) + options.currencySymbol + '</td>' +
-          '<td title="Quantity"><input type="number" min="1" style="width: 40px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
-          '<td title="Total" class="text-right ' + classProductTotal + '">' + MathHelper.getRoundedNumber(total) + options.currencySymbol + '</td>' +
-          '<td title="Remove from Cart" class="text-center" style="width: 30px;padding: 5px 0;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">×</a></td>' +
+          '<td title="Unit Price" class="text-right">' + MathHelper.getRoundedNumber(this.price) + '</td>' +
+          '<td title="Quantity"><input type="number" min="1" style="width: 30px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
+          '<td title="Total" class="text-right ' + classProductTotal + ' style="width: 30px;">' + MathHelper.getRoundedNumber(total) + '</td>' +
+          '<td title="Remove from Cart" class="text-center" style="width: 30px;padding: 3px 0;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">×</a></td>' +
           '</tr>'
         );
       });
@@ -256,7 +275,7 @@
       $cartTable.append(products.length ?
         '<tr>' +
         '<td></td>' +
-        '<td><strong>ИТОГО</strong></td>' +
+        '<td><strong>ИТОГО:</strong></td>' +
         '<td></td>' +
         '<td></td>' +
         '<td class="text-right"><strong id="' + idGrandTotal + '"></strong></td>' +
@@ -324,7 +343,8 @@
       var id = $(this).closest("tr").data("id");
       var quantity = $(this).val();
 
-      $(this).parent("td").next("." + classProductTotal).text(MathHelper.getRoundedNumber(price * quantity) + options.currencySymbol);
+      $(this).parent("td").next("." + classProductTotal).text(MathHelper.getRoundedNumber(price * quantity));
+      // $(this).parent("td").next("." + classProductTotal).text(MathHelper.getRoundedNumber(price * quantity) + options.currencySymbol);
       ProductManager.updatePoduct(id, quantity);
 
       $cartBadge.text(ProductManager.getTotalQuantity());
