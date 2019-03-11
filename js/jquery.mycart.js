@@ -224,8 +224,8 @@
         '<div class="modal-body">' +
         '<table class="table table-responsive" id="' + idCartTable + '"></table>' +
         
-        '<div class="col-md-10 col-xs-12">' +
-        '<form method="post" action="" id="ajaxform1" class="checkout-form">' +
+        '<div class="payment-form col-md-10 col-xs-12 hidden">' +
+        '<form method="post" action="" id="ajaxform" class="checkout-form">' +
           '<div class="form-group">' +
             '<label for="name" class="control-label">Имя:</label>' +
             '<input type="text" class="form-control" size="32" maxlength="36" id="name" name="name" placeholder="Ваше имя" val="">' +
@@ -239,6 +239,7 @@
             '<input type="text"  class="form-control" size="32" maxlength="36" id="phone" name="phone" class="form-control bfh-phone" placeholder="Номер телефона" val="">' +
           '</div>' +
         '</div>' +
+        // '<button type="submit" class="btn btn-black disabled ' + classCheckoutCart + '">Оформить</button>' +
         '</form>' +
         '</div>' +
 
@@ -285,8 +286,10 @@
       );
       if(products.length) {
         $(".my-cart-checkout").removeClass("disabled");
+        $(".payment-form").removeClass("hidden");
       } else {
         $(".my-cart-checkout").addClass("disabled");
+        $(".payment-form").addClass("hidden");
       }
 
       var discountPrice = options.getDiscountPrice(products, ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
