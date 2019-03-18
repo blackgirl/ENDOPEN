@@ -408,6 +408,9 @@ iframe {
     font-weight: 600;
     letter-spacing: 1px;
 }
+.product-thumb {
+    margin-bottom: 30px;
+}
 .product-thumb h3 {
     min-height: 42px;
 }
