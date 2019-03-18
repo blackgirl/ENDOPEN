@@ -465,6 +465,16 @@ iframe {
 #my-cart-modal .modal-dialog {
     background: #fff;
 }
+.product-modal {
+    padding: 50px 75px;
+}
+.product-modal .modal-dialog {
+    width: auto;
+}
+.product-modal .modal-content {
+    background: #fff;
+    padding: 50px;
+}
 
 /* SLIDERS */
 .carousel-inner {
@@ -744,6 +754,13 @@ footer p {
     #reviews-slide .carousel-control,
     .carousel-control {
         padding: 0;
+    }
+    .product-modal {
+        padding: 30px 15px;
+    }
+    .product-modal .modal-content {
+        padding: 15px;
+        padding-bottom: 50px;
     }
     ul.social-network li {
       margin: 5px;
