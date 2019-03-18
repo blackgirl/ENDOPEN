@@ -71,12 +71,15 @@ blockquote {
     background-size: cover;
     background-position: bottom center;
 }
-    #logobanner {
-        background: url(../img/bg_EndoPen.png);
-        min-height: 400px;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+#logobanner {
+    background: url(../img/bg_EndoPen.png);
+    min-height: 400px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#banner img {
+    display: none;
+}
 
 /* LIFEHUCKS BLOCK */
 #lifehucks .page-content .row div {
@@ -733,17 +736,19 @@ footer p {
         padding-bottom: 0;
         /*background-size: contain;*/
         background-position-y: 40px;
-        padding-top: 75px;
+        padding-top: 175px;
     }
     #banner img {
         width: 100%;
+        display: block;
     }
     #banner p,
     #banner ul {
         margin: 20px 0;
     }
     #logobanner {
-        min-height: 100px;
+        background: none;
+        min-height: 400px;
     }
     .page-header {
         text-align: center;
