@@ -41,7 +41,7 @@ myNavBar.init(  [
  * of the scroll
  */
 function offSetManager(){
-    var yOffset = 150;
+    var yOffset = 200;
     var currYOffSet = window.pageYOffset;
     if(yOffset < currYOffSet) {
         myNavBar.add();
