@@ -821,6 +821,9 @@ footer p {
     }
 }
 @media (min-width: 1280px) {
+    #banner {
+        padding-top: 250px;
+    }
     .logobanner {
         min-height: 600px;
     }
