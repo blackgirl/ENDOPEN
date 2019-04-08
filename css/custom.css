@@ -596,6 +596,9 @@ iframe {
     top: 45%;
     left: 60px;
 }
+#product_carousel .caption {
+    position: absolute;
+}
 
 /* FORM */
 #form {
