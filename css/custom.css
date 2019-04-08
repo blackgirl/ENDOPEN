@@ -170,6 +170,7 @@ h3, h4 {
 }*/
 .bs-docs-section h2 {
     padding-top: 50px;
+    padding-bottom: 30px;
 }
 .bs-component {
     position: relative;
