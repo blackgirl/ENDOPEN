@@ -227,7 +227,7 @@
         '<div class="payment-form col-md-10 col-xs-12 hidden">' +
         '<form method="post" action="" id="ajaxform" class="checkout-form">' +
           '<div class="form-group">' +
-            '<label for="name" class="control-label">Имя:</label>' +
+            '<label for="name" class="control-label">Имя и Фамилия:</label>' +
             '<input type="text" class="form-control" size="32" maxlength="36" id="name" name="name" placeholder="Ваше имя" val="">' +
           '</div>' +
           '<div class="form-group">' +

@@ -169,6 +169,11 @@ h3, h4 {
     top: 46%;
     right: 100%;
 }
+.page-header img.shop-bg {
+    right: -250px;
+    top: -50px;
+    max-width: 300px;
+}
 /*.page-header p {
     padding: 15px;
     font-weight: 300;
@@ -452,9 +457,16 @@ iframe {
     /*color: lightskyblue;*/
     text-shadow: none;
 }
-.close:hover {
+.modal-header .close {
+    margin-top: -30px;
+}
+#my-cart-modal .modal-header .close {
+    margin-top: -2px;
+}
+.close:hover, .close:focus {
     opacity: 1;
     color: #000;
+    outline: none;
 }
 .my-cart-icon {
     cursor: pointer;
@@ -504,8 +516,26 @@ iframe {
     width: auto;
 }
 .product-modal .modal-content {
-    background: #fff;
     padding: 50px;
+}
+.modal-content {
+    background: #fff;
+}
+
+/* OUR TEAM */
+.team-img:hover {
+    -webkit-transform: scale(1.025);
+    -moz-transform: scale(1.025);
+    -ms-transform: scale(1.025);
+    -o-transform: scale(1.025);
+    transform: scale(1.025);
+    cursor: pointer;
+}
+.team-modal {
+    padding: 50px 75px;
+}
+.team-modal .modal-content {
+    padding: 30px;
 }
 
 /* SLIDERS */
