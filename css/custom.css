@@ -587,6 +587,9 @@ iframe {
     text-decoration: none;
     opacity: 0.8;
 }
+.carousel-control img {
+    max-height: 40px;
+}
 .carousel-indicators {
     left: 0;
     margin: 0;
@@ -664,6 +667,8 @@ td, th {
 /* BUTTONS */
 .btn {
     border-radius: 0;
+    font-variant: none;
+    text-transform: none;
 }
 .btn-black {
     /*border: 3px solid #000;*/
@@ -671,8 +676,6 @@ td, th {
     color: #000;
     background: #fff;
     border-radius: 4px;
-    font-variant: none;
-    text-transform: none;
 }
 .btn-black:hover {
     background: #000;
