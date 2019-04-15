@@ -862,6 +862,10 @@ footer p {
         padding: 15px;
         padding-bottom: 50px;
     }
+    .modal-header .close {
+        margin-top: -20px;
+        margin-right: -20px;
+    }
     ul.social-network li {
       margin: 5px;
     }
