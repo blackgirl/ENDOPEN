@@ -670,6 +670,12 @@ td, th {
     border-radius: 0;
     font-variant: none;
     text-transform: none;
+    /*font-size: 14px;
+    font-family: 'Arial';
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: 2px;
+    border-width: 1px;*/
 }
 .btn-black {
     /*border: 3px solid #000;*/
