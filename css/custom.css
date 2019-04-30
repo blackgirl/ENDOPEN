@@ -456,6 +456,9 @@ iframe {
 .product-thumb {
     margin-bottom: 30px;
 }
+.product-thumb img {
+    margin: 0 auto;
+}
 .product-thumb h3 {
     min-height: 42px;
 }
