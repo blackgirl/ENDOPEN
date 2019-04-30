@@ -121,9 +121,11 @@
 		      <div class="carousel-nav text-center"><div id="prev"><a class="left carousel-control" href="#product_carousel" role="button" data-slide="prev"><img src="img/icons8-back.png" alt=""></a></div>
 		      <!-- <div class="carousel-nav text-center"><div id="prev"><a class="left carousel-control" href="#product_carousel" role="button" data-slide="prev"><span class="">&lang;</span></a></div> -->
 		        <ol class="carousel-indicators">
-					<li class="indicator" data-target="#product_carousel" data-slide-to="0"></li>
+					<li class="indicator active" data-target="#product_carousel" data-slide-to="0"></li>
 					<li class="indicator" data-target="#product_carousel" data-slide-to="1"></li>
-					<li class="indicator active" data-target="#product_carousel" data-slide-to="2"></li>
+					<li class="indicator" data-target="#product_carousel" data-slide-to="2"></li>
+					<li class="indicator" data-target="#product_carousel" data-slide-to="3"></li>
+					<li class="indicator" data-target="#product_carousel" data-slide-to="4"></li>
 				</ol>
 			    <div id="next"><a class="right carousel-control" href="#product_carousel" role="button" data-slide="next"><img src="img/icons8-next.png" alt=""></a></div>
 			    <!-- <div id="next"><a class="right carousel-control" href="#product_carousel" role="button" data-slide="next"><span class="">&rang;</span></a></div> -->
@@ -140,7 +142,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header"><img class="bg-line" src="img/headers-line.png" alt=""><h2 id="">Магазин</h2><img class="shop-bg hidden-xs" src="img/bg-small-item.png"></div>
-          </div>
+            </div>
         </div>
         <div class="row" data-sr>
             <div class="col-md-4 product-thumb text-center clearfix">
@@ -284,6 +286,60 @@
 			    <div id="next"><a class="right carousel-control" href="#instruction_carousel" role="button" data-slide="next"><img src="img/icons8-next.png" alt=""></a></div>
 		      </div>
 	        </div>
+	      </div>
+	    </div>
+    </div>
+    <br><br>
+</div>
+<!-- Instructions Scheme Section -->
+<div class="container-fluid col-md-8 col-md-offset-2 col-xs-12">
+	<img class="instructions-scheme-bg hidden-xs" src="img/bg-big-item.png">
+    <div class="bs-docs-section" id="instructions-scheme">
+        <div class="row" data-sr>
+          <div class="col-lg-11 col-lg-offset-1">
+	          <div class="col-lg-6 instructions-scheme-text">
+	          	<h2 class="text-center">ENDOPEN</h2>
+	          	<p>Соеденяет в себе функции:<br>
+				- моделировочных кисточек<br>
+				- файлов<br>
+				- цанги (с зажимаемым в ней мелкого инструментария)<br>
+				- корневой иглы с магнитом</p>
+	          </div>
+	          <div class="col-lg-6">
+	          	<div id="instructions-scheme_carousel" class="carousel slide multi-item-carousel" data-ride="carousel" data-interval="false">
+		          <div class="carousel-inner">
+		            <div class="item active" id="">
+		              <div class="col-xs-12">
+		                <div class="image"><a role="button" class="" data-toggle="modal" data-target=".instruction-scheme-modal1"><img src="img/scheme/fix-uz-kist.png" alt="endopen" class="img-responsive"></a></div>
+		              </div>
+		            </div>
+		            <div class="item" id="">
+		              <div class="col-xs-12">
+		                <div class="image"><a role="button" class="" data-toggle="modal" data-target=".instruction-scheme-modal2"><img src="img/scheme/fix-sh-kist.png" alt="endopen" class="img-responsive"></a></div>
+		              </div>
+		            </div>
+		            <div class="item" id="">
+		              <div class="col-xs-12">
+		                <div class="image"><a role="button" class="" data-toggle="modal" data-target=".instruction-scheme-modal3"><img src="img/scheme/fix-files.png" alt="endopen" class="img-responsive"></a></div>
+		              </div>
+		            </div>
+		            <div class="item" id="">
+		              <div class="col-xs-12">
+		                <div class="image"><a role="button" class="" data-toggle="modal" data-target=".instruction-scheme-modal4"><img src="img/scheme/tsang-fix.png" alt="endopen" class="img-responsive"></a></div>
+		              </div>
+		            </div>
+		          </div>
+			      <div class="carousel-nav text-center"><div id="prev"><a class="left carousel-control" href="#instructions-scheme_carousel" role="button" data-slide="prev"><img src="img/icons8-back.png" alt=""></a></div>
+			        <ol class="carousel-indicators">
+						<li class="indicator active" data-target="#instructions-scheme_carousel" data-slide-to="0"></li>
+						<li class="indicator" data-target="#instructions-scheme_carousel" data-slide-to="1"></li>
+						<li class="indicator" data-target="#instructions-scheme_carousel" data-slide-to="2"></li>
+						<li class="indicator" data-target="#instructions-scheme_carousel" data-slide-to="3"></li>
+					</ol>
+				    <div id="next"><a class="right carousel-control" href="#instructions-scheme_carousel" role="button" data-slide="next"><img src="img/icons8-next.png" alt=""></a></div>
+			      </div>
+		        </div>
+		      </div>
 	      </div>
 	    </div>
     </div>
@@ -607,59 +663,55 @@
   </div>
 </div> -->
 <!-- TEAM MODAL -->
-<div class="modal fade team1-modal team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade instruction-scheme-modal1 team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog">
     <div class="modal-content col-md-12">
     	<div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
       <div class="caption col-md-12">
-	    <img src="http://via.placeholder.com/100x100" class="col-md-6 col-xs-12 img-circle img-responsive" />
-      	<p>Колесник Владимир – учредитель, разработчик инструмента и проекта, идейный вдохновитель.</p>
+	    <img src="img/scheme/fix-uz-kist.png" alt="endopen" class="img-responsive">
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade team2-modal team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade instruction-scheme-modal2 team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog">
     <div class="modal-content col-md-12">
     	<div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
       <div class="caption col-md-12">
-	    <img src="http://via.placeholder.com/100x100" class="col-md-6 col-xs-12 img-circle img-responsive" />
-      	<p>Колесник Марина – учредитель, руководитель проекта.</p>
+	    <img src="img/scheme/fix-sh-kist.png" alt="endopen" class="img-responsive">
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade team3-modal team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade instruction-scheme-modal3 team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog">
     <div class="modal-content col-md-12">
     	<div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
       <div class="caption col-md-12">
-	    <img src="http://via.placeholder.com/100x100" class="col-md-6 col-xs-12 img-circle img-responsive" />
-      	<p>Онуфриенко Богдан – техническая поддержка, разработка дизайна сайта, руководитель отделом продаж и контакт с клиентом.</p>
+	    <img src="img/scheme/fix-files.png" alt="endopen" class="img-responsive">
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade team4-modal team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<div class="modal fade instruction-scheme-modal4 team-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog">
     <div class="modal-content col-md-12">
     	<div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         </div>
       <div class="caption col-md-12">
-	    <img src="http://via.placeholder.com/100x100" class="col-md-6 col-xs-12 img-circle img-responsive" />
-      	<p>Чорная Алена – верстка сайта, техническая поддержка сайта.</p>
+	    <img src="img/scheme/tsang-fix.png" alt="endopen" class="img-responsive">
       </div>
     </div>
   </div>
 </div>
-
+<!-- PATENT MODAL -->
 <div class="modal fade patent1-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
   <div class="modal-dialog modal-lg">
     <div class="modal-content col-md-10 text-center">
