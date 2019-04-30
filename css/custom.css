@@ -762,6 +762,18 @@ ul.social-network li {
     color: #fccc63;
     /*background-color: #fccc63;*/
 }
+.social-network a.icoMessenger {
+    background: url(../img/facebook-messenger-black.png);
+}
+.social-network a.icoMessenger:hover {
+    background: url(../img/facebook-messenger-blue.png);
+}
+.social-network a.icoMessenger, .social-network a.icoMessenger:hover {
+    background-size: contain;
+    max-width: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /*.social-network a.icoTwitter{
   background-color: #33ccff;
 }
@@ -784,7 +796,7 @@ ul.social-network li {
   border-radius:0;
   text-align:center;
   width: 40px;
-  height: 40px;
+  height: 38px;
   font-size: 24px;
 }
 .social-square li i {
