@@ -505,22 +505,33 @@ iframe {
     z-index: 1032;
 }
 .fa-basket {
-    background: url(../img/icons8-shopping-basket.png);
-    /*background: url(https://img.icons8.com/wired/1600/shopping-bag-full.png);*/
+    /* background: url(https://img.icons8.com/wired/1600/shopping-bag-full.png); */
+    /*background: url(../img/icons8-shopping-basket.png);*/
+    background: url(../img/busket.png);
     width: 40px;
     height: 40px;
     background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-right: 15px;
 }
 .fa-basket:hover {
-    background: url(../img/icons8-shopping-basket-filled.png);
-    background-size: contain;
+    /*background: url(../img/icons8-shopping-basket-filled.png);*/
+    /*background-size: contain;*/
 }
 .badge-notify {
     /*background: #c71585;*/
-    background: #000000;
+    /*background: #000000;
     position: relative;
     bottom: -10px;
+    right: 15px;
+    font-family: monospace;*/
+    background: none;
+    color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    position: relative;
+    bottom: 0px;
     right: 15px;
     font-family: monospace;
 }
