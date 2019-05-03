@@ -384,6 +384,9 @@
         drawTable();
         $cartBadge.text(ProductManager.getTotalQuantity());
       });
+      if(id == 2) {
+        $(".kolpachek-checkbox").addClass("hidden");
+      }
     });
 
     $(document).on('click', "." + classCheckoutCart, function () {
