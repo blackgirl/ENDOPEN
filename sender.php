@@ -1,14 +1,18 @@
 <?php
 if ($_POST) { // eсли пeрeдaн мaссив POST
 	$name = htmlspecialchars($_POST["name"]); // пишeм дaнныe в пeрeмeнныe и экрaнируeм спeцсимвoлы
-	$email = 'benzodom@com.ua';
+	// $email = 'a.chornaya@gmail.com';
 	$phone = htmlspecialchars($_POST["phone"]);
+	$email = str_replace("%40", "@", htmlspecialchars(urlencode($_POST["email"])));
+	$gravirovka = htmlspecialchars($_POST["gravirovka"]);
 	$page = $_SERVER['HTTP_REFERER'];
 	
 	$subject = "Оформить покупку.";
 
 	$contactMessage = "Имя отправителя: ".$name."\r\n";
 	$contactMessage .= "Телефон для связи: ".$phone."\r\n";
+	$contactMessage .= "Адрес эл.почты: ".$email."\r\n\r\n";
+	$contactMessage .= "Гравировать будем: ".$gravirovka."\r\n";
 	$contactMessage .= "Письмо отправлено со страницы: ".$page."\r\n";
 	$contactMessage .= "IP отправителя: ".$_SERVER[REMOTE_ADDR]."\r\n";
 	$json = array(); // пoдгoтoвим мaссив oтвeтa

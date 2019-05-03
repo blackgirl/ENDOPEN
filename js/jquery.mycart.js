@@ -186,7 +186,6 @@
 
 
   var loadMyCartEvent = function (targetSelector) {
-
     var options = OptionManager.getOptions();
     var $cartIcon = $("." + options.classCartIcon);
     var $cartBadge = $("." + options.classCartBadge);
@@ -202,6 +201,7 @@
     var classProductTotal = 'my-product-total';
     var classAffixMyCartIcon = 'my-cart-icon-affix';
 
+    var kolpachekCheckbox = false;
 
     if (options.cartItems && options.cartItems.constructor === Array) {
       ProductManager.clearProduct();
@@ -226,6 +226,15 @@
         
         '<div class="payment-form col-md-10 col-xs-12 hidden">' +
         '<form method="post" action="" id="ajaxform" class="checkout-form">' +
+          '<div class="checkbox kolpachek-checkbox hidden">' +
+            '<label>' +
+              '<input type="checkbox" id="kolpachek-checkbox">Добавить колпачок <i>+ 5&nbsp;€ / шт</i>' +
+            '</label>' +
+          '</div><hr>' +
+          '<div class="form-group">' +
+            '<label for="gravirovka" class="control-label">Что гравировать будем:</label>' +
+            '<input type="text" class="form-control" size="32" maxlength="36" id="gravirovka" name="gravirovka" placeholder="Ваше имя" val="">' +
+          '</div>' +
           '<div class="form-group">' +
             '<label for="name" class="control-label">Имя и Фамилия:</label>' +
             '<input type="text" class="form-control" size="32" maxlength="36" id="name" name="name" placeholder="Ваше имя" val="">' +
@@ -261,6 +270,9 @@
       var products = ProductManager.getAllProducts();
       $.each(products, function () {
         var total = this.quantity * this.price;
+        if(this.id == 2) {
+          $(".kolpachek-checkbox").removeClass("hidden");
+        }
         $cartTable.append(
           '<tr title="' + this.summary + '" data-id="' + this.id + '" data-price="' + this.price + '">' +
           '<td class="text-center hidden-xs" style="width: 30px;"><img width="30px" height="30px" src="' + this.image + '"/></td>' +
@@ -295,17 +307,10 @@
       var discountPrice = options.getDiscountPrice(products, ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
       // if (products.length && discountPrice !== null) {
       //   $cartTable.append(
-      //     '<tr style="color: red">' +
-      //     '<td></td>' +
-      //     '<td><strong>ИТОГО (с учётом доставки)</strong></td>' +
-      //     '<td></td>' +
-      //     '<td></td>' +
-      //     '<td class="text-right"><strong id="' + idDiscountPrice + '"></strong></td>' +
-      //     '<td></td>' +
-      //     '</tr>'
+      //     '<tr style="color: red"><td></td><td><strong>ИТОГО (с учётом доставки)</strong></td>' +
+      //     '<td></td><td></td><td class="text-right"><strong id="' + idDiscountPrice + '"></strong></td><td></td></tr>'
       //   );
       // }
-
       showGrandTotal();
       showDiscountPrice();
     };
@@ -319,6 +324,17 @@
         ProductManager.updatePoduct(id, $(this).val());
       });
     };
+
+    $("#kolpachek-checkbox").click(function() {
+      if($(this).is(":checked")) {
+        kolpachekCheckbox = true;
+        $("#" + idGrandTotal).text(MathHelper.getRoundedNumber(ProductManager.getTotalPrice() + 5) + options.currencySymbol);
+      } else {
+        kolpachekCheckbox = false;
+        $("#" + idGrandTotal).text(MathHelper.getRoundedNumber(ProductManager.getTotalPrice()) + options.currencySymbol);
+      }
+    });
+
     var showGrandTotal = function () {
       $("#" + idGrandTotal).text(MathHelper.getRoundedNumber(ProductManager.getTotalPrice()) + options.currencySymbol);
     };
@@ -326,9 +342,7 @@
       $("#" + idDiscountPrice).text(MathHelper.getRoundedNumber(options.getDiscountPrice(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity())) + options.currencySymbol);
     };
 
-    /*
-    EVENT
-    */
+    /* EVENT */
     if (options.affixCartIcon) {
       var cartIconBottom = $cartIcon.offset().top * 1 + $cartIcon.css("height").match(/\d+/) * 1;
       var cartIconPosition = $cartIcon.css('position');
@@ -379,7 +393,12 @@
         return;
       }
       updateCart();
-      var isCheckedOut = options.checkoutCart(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
+      var total = ProductManager.getTotalPrice();
+      if(kolpachekCheckbox) {
+        total += 5;
+      }
+      var isCheckedOut = options.checkoutCart(ProductManager.getAllProducts(), total, ProductManager.getTotalQuantity(), kolpachekCheckbox);
+      // var isCheckedOut = options.checkoutCart(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
       if (isCheckedOut !== false) {
         ProductManager.clearProduct();
         $cartBadge.text(ProductManager.getTotalQuantity());
