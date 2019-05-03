@@ -907,7 +907,7 @@ footer p {
     #instruction_carousel .caption {
         position: relative;
         left: auto;
-        text-align: justify;
+        /*text-align: justify;*/
     }
     #instruction_carousel .caption + .text-right{
         text-align: left;
