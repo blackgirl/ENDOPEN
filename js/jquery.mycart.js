@@ -13,7 +13,7 @@
 
     var _options = null;
     var DEFAULT_OPTIONS = {
-      currencySymbol: '₴',
+      currencySymbol: '',
       classCartIcon: 'my-cart-icon',
       classCartBadge: 'my-cart-badge',
       classProductQuantity: 'my-product-quantity',
@@ -233,7 +233,7 @@
           '</div><hr>' +
           '<div class="form-group">' +
             '<label for="gravirovka" class="control-label">Что гравировать будем:</label>' +
-            '<input type="text" class="form-control" size="32" maxlength="36" id="gravirovka" name="gravirovka" placeholder="Ваше имя" val="">' +
+            '<input type="text" class="form-control" size="32" maxlength="36" id="gravirovka" name="gravirovka" placeholder="Например Dr. Kolesnyk" val="">' +
           '</div>' +
           '<div class="form-group">' +
             '<label for="name" class="control-label">Имя и Фамилия:</label>' +
@@ -280,7 +280,7 @@
           '<td title="Unit Price" class="hidden-xs text-right">' + MathHelper.getRoundedNumber(this.price) + '</td>' +
           '<td class="quantity" title="Quantity"><input type="number" min="1" style="width: 30px;" class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
           '<td title="Total" class="text-right ' + classProductTotal + ' style="">' + MathHelper.getRoundedNumber(total) + '</td>' +
-          '<td title="Remove from Cart" class="text-center" style="width: 30px;padding: 3px 0;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">×</a></td>' +
+          '<td title="Remove from Cart" class="text-center" style="width: 30px;padding: 3px 0;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '"></a></td>' +
           '</tr>'
         );
       });

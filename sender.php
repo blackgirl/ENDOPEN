@@ -6,13 +6,34 @@ if ($_POST) { // eсли пeрeдaн мaссив POST
 	$email = str_replace("%40", "@", htmlspecialchars(urlencode($_POST["email"])));
 	$gravirovka = htmlspecialchars($_POST["gravirovka"]);
 	$page = $_SERVER['HTTP_REFERER'];
-	
 	$subject = "Оформить покупку.";
-
-	$contactMessage = "Имя отправителя: ".$name."\r\n";
+	$total = $_POST["total"];
+	$kolpachek = $_POST["kolpachek"];
+	$items = $_POST["items"];
+	//$items = json_decode($items);
+	$items = substr($items, 2, -2);
+	$items = explode('},{', $items);
+	$itemsString = '';
+	/*foreach ($items as $key => $value) {
+		$itemsString .= $value['name'];
+		$itemsString .= $value['price'];
+		$itemsString .= $value['quantity'];
+	}*/
+	for ($i = 0; $i < count($items); $i++) {
+		$index = $i+1;
+    	$itemsString .= $index.") ".str_replace('"',' ', $items[$i])."\r\n";
+    }
+	
+	$contactMessage = "Товары:\r\n".$itemsString."\r\n";
+	if($kolpachek) {
+		$contactMessage .= "Добавить колпачек: ".$kolpachek."\r\n";
+	}
+	$contactMessage .= "Сумма к оплате: ".$total."\r\n\r\n";
+	$contactMessage .= "Гравировать будем: ".$gravirovka."\r\n\r\n";
+	$contactMessage .= "Имя отправителя: ".$name."\r\n";
 	$contactMessage .= "Телефон для связи: ".$phone."\r\n";
 	$contactMessage .= "Адрес эл.почты: ".$email."\r\n\r\n";
-	$contactMessage .= "Гравировать будем: ".$gravirovka."\r\n";
+	$contactMessage .= "————————————————————————————————————————————————————\r\n\r\n";
 	$contactMessage .= "Письмо отправлено со страницы: ".$page."\r\n";
 	$contactMessage .= "IP отправителя: ".$_SERVER[REMOTE_ADDR]."\r\n";
 	$json = array(); // пoдгoтoвим мaссив oтвeтa
@@ -54,9 +75,9 @@ if ($_POST) { // eсли пeрeдaн мaссив POST
 	$emailgo = new TEmail; // инициaлизируeм супeр клaсс oтпрaвки
 	$emailgo->from_email = $email; // oт кoгo
 	$emailgo->from_name = $name;
-	$emailgo->to_email = 'info@benzodom.com.ua'; // кoму
+	$emailgo->to_email = 'team@endopen.com.ua'; // кoму
 	// $emailgo->to_email = 'benzodom@ya.ru'; // кoму
-	$emailgo->to_name = 'www.benzodom.com.ua';
+	$emailgo->to_name = 'endopen.com.ua';
 	$emailgo->subject = $subject; // тeмa
 	$emailgo->body = $contactMessage; // сooбщeниe
 	$emailgo->send(); // oтпрaвляeм

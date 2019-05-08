@@ -46,9 +46,6 @@
         <li class="">
           <a href="lifehucks.html" class="page-scroll">Лайфхаки</a>
         </li>
-        <!-- <li class="">
-          <a href="#team" class="page-scroll">Наша команда</a>
-        </li> -->
         <li class="">
           <a href="reviews.html" class="page-scroll">Отзывы</a>
         </li>
@@ -704,7 +701,7 @@ $(function () {
       });
     }
     $('.my-cart-btn').myCart({
-      // currencySymbol: '₴',
+      // currencySymbol: '',
       currencySymbol: '€',
       classCartIcon: 'my-cart-icon',
       classCartBadge: 'my-cart-badge',
@@ -727,33 +724,37 @@ $(function () {
         // console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
       },
       checkoutCart: function(products, totalPrice, totalQuantity, kolpachekCheckbox) {
-        var checkoutString = "Total Price=" + totalPrice;
-        // checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
-        $.each(products, function(){
-          checkoutString += ("&item=" + this.name + "&price=" + this.price + "&quantity=" + this.quantity);
-          // checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+        var items = [];
+        $.each(products, function(i) {
+        	items.push({name:this.name,price:this.price+"€",quantity:this.quantity+"шт"});
         });
-        if(kolpachekCheckbox) {
-        	checkoutString += ("&item=Добавить колпачок&price=5&quantity=1");
-        }
-        // alert(checkoutString);
         var form = $("#ajaxform");
-        var error = false; // предварительно ошибок нет
+        var error = false;
 		form.find('input').each( function() {
-			if($(this).val() == '') { // если находим пустое
-				alert('Заполните поле "'+$(this).attr('placeholder')+'"!');
-				error = true;
+			if($(this).val() == '') {
+				if($(this).attr('id') != 'gravirovka') {
+					alert('Заполните поле "'+$(this).attr('placeholder')+'"!');
+					error = true;
+				} else {
+					$(this).val('Ничего');
+				}
 			}
 		});
-		if(!error) { // если ошибки нет
-			var data = form.serialize() + "&"+checkoutString; // подготавливаем данные
+		var data = form.serializeArray();
+        data.push({name:"total",value:totalPrice+"€"});
+        if(kolpachekCheckbox) {
+        	data.push({name:"kolpachek",value:"+5€"});
+        }
+		items = JSON.stringify(items);
+		if(!error) {
+			data.push({name:"items",value:items});
 			console.log(data);
-			$.ajax({ // инициализируем ajax запрос
-			    type: 'POST', // отправляем в POST формате, можно GET
-			    url: 'sender.php', // путь до обработчика
-			    dataType: 'json', // ответ ждем в json формате
-			    data: data, // данные для отправки
-		        beforeSend: function(data) { // событие до отправки
+			$.ajax({
+			    type: 'POST',
+			    url: 'sender.php',
+			    dataType: 'json',
+			    data: data,
+		        beforeSend: function(data) {
 		            form.find('input[type="submit"]').attr('disabled', 'disabled'); // отключим кнопку
 		        },
 		        success: function(data){ // событие после удачного обращения к серверу и получения ответа
@@ -761,7 +762,7 @@ $(function () {
 		       			alert(data['error']); // покажем её текст
 		       		} else { // если все прошло ок
 		       			$('.my-cart-modal').modal('hide').find("input:text").val('').end();
-		       			alert('Спасибо!'); // пишем что все ок
+		       			alert('Спасибо за ваш заказ! Мы свяжемся с вами.'); // пишем что все ок
 		       		}
 		        },
 		        error: function (xhr, ajaxOptions, thrownError) { // в случае неудачного завершения запроса к серверу

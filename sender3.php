@@ -12,8 +12,8 @@ if ($_POST) { // eсли пeрeдaн мaссив POST
 	$subject = "Анкета партнёра.";
 
 	$contactMessage = "Контактное лицо: ".$name."\r\n";
-	$contactMessage = "Название компании: ".$company."\r\n";
-	$contactMessage = "Регион: ".$region."\r\n";
+	$contactMessage .= "Название компании: ".$company."\r\n";
+	$contactMessage .= "Регион: ".$region."\r\n";
 	$contactMessage .= "Телефон для связи: ".$phone."\r\n";
 	$contactMessage .= "Адрес эл.почты: ".$email."\r\n\r\n";
 	// $contactMessage .= "Текст сообщения: ".$message."\r\n\r\n";
